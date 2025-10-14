@@ -54,7 +54,7 @@
     // scrolled header
     window.addEventListener('scroll', function() {
         const header = document.querySelector('header');
-        if (window.scrollY > 200) {
+        if (window.scrollY > 150) {
             header.classList.add('scrolled');
             nav.style.display = 'block';
             document.getElementById('topBtn').style.display = 'flex';
