@@ -1,0 +1,619 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #047fd5;
+  --shine-color: #f3c412;
+  --first-background-color: #ffffff;
+  --secondary-background-color: #f0f0f0;
+  --text-color: black;
+  --second-text-color: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--second-text-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* body */
+
+body {
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+}
+
+/* load */
+.load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: url("https://wallpapercave.com/wp/NUxKPlh.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.load::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(225, 225, 225, 0.5);
+  z-index: -1;
+}
+
+.load img {
+  width: 500px;
+  animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* top button */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: var(--second-text-color);
+  cursor: pointer;
+  padding: 12px 14px;
+  border-radius: 50%;
+  display: none;
+  border: 2px solid var(--shine-color);
+}
+
+/* header section */
+header {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+header.scrolled{
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  background: var(--first-background-color);
+  top: 0;
+}
+
+header .logo img {
+  width: 250px;
+  height: 250px;
+}
+
+header.scrolled .logo img{
+  width: 85px;
+  height: 80px;
+}
+
+nav{
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--shine-color);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary-color);
+}
+
+/* hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  background: url("https://wallpaperaccess.com/full/208535.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: var(--second-text-color);
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero-content .first-p{
+  color: #f3c412;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.hero-btn {
+  margin-top: 50px;
+}
+
+/* section code */
+.section {
+  padding: 100px 20px;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.section-content {
+  width: 50%;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--shine-color);
+  text-decoration: underline;
+}
+
+.section p {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+.section img {
+  margin-top: 50px;
+  height: 400px;
+  border-radius: 15px;
+}
+
+/* about section */
+#waterStory {
+  background-color: var(--secondary-background-color);
+}
+
+/* water story */
+.water-story {
+  gap: 0px;
+}
+
+details {
+  background-color: var(--primary-color);
+  color: var(--second-text-color);
+  border: none;
+  border-radius: 15px;
+  margin: 10px 0;
+  cursor: pointer;
+  overflow: hidden;
+  max-height: 60px;
+  transition: background-color 0.3s ease, max-height 3s ease;
+}
+
+details[open] {
+  max-height: 1000px;
+}
+
+details:hover {
+  background-color: var(--shine-color);
+  color: var(--text-color);
+}
+
+#waterStory details p {
+  color: var(--second-text-color);
+}
+
+#waterStory details:hover p {
+  color: var(--text-color);
+}
+
+summary {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 550;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::marker {
+  font-size: 0px;
+}
+
+details[open] summary i {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--second-text-color);
+}
+
+details[open] p {
+  padding: 10px 20px;
+}
+
+/* products section */
+
+.product-content {
+  width: 93%;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondary-background-color);
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  margin-top: 0;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+/* healthy tips */
+.healthy-tips {
+  background-color: var(--secondary-background-color);
+}
+
+.healthy-tips ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.healthy-tips li {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+/* production process */
+.production-process iframe {
+  height: 400px;
+  width: 700px;
+  border-radius: 15px;
+}
+
+.production-process ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.production-process li {
+  font-size: 20px;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+/* food safety policy */
+#foodSafetyPolicy {
+  background-color: var(--secondary-background-color);
+}
+
+.policy-content p {
+  margin: 20px auto;
+}
+
+/* contact section */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.docs-parts {
+  margin-top: 50px;
+  width: 50%;
+  font-size: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 800px;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  resize: vertical;
+  font-family: "Arial", sans-serif;
+}
+.contact form button {
+  width: 350px;
+  align-self: center;
+}
+
+/* footer section */
+footer {
+  background-color: var(--primary-color);
+  color: var(--second-text-color);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+footer p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+footer a {
+  margin: 10px;
+  color: var(--shine-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .load img {
+    width: 300px;
+  }
+
+  header {
+    top: 40px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 0px;
+  }
+
+  header.scrolled{
+    padding: 0 30px 0 20px;
+    top: 0;
+  }
+
+  header .logo img {
+    width: 150px;
+    height: 150px;
+  }
+
+  header.scrolled .logo img {
+    width: 75px;
+    height: 70px;
+  }
+
+    header.scrolled .menu-toggle{
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    top: 70px;
+    right: -500px;
+    width: 100%;
+    height: auto;
+    background-color: var(--first-background-color);
+    display: block;
+    transition: right 0.5s ease;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px;
+  }
+
+  nav.show{
+    right: 0;
+  }
+
+  nav.show ~ .menu-toggle .bar:nth-child(1){
+    transform: rotate(-45deg) translate(-5px, 4px);
+  }
+
+  nav.show ~ .menu-toggle .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  nav.show ~ .menu-toggle .bar:nth-child(3){
+    transform: rotate(45deg) translate(-7px, -6px);
+  }
+
+
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+
+  .section-content {
+    width: 100%;
+  }
+
+  #waterStory .section-content {
+    margin-top: 40px;
+  }
+
+  h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--shine-color);
+}
+
+.hero-content .first-p{
+  font-size: 20px;
+}
+
+.section p {
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+.section li{
+  font-size: 16px;
+}
+
+  .section img {
+    height: 200px;
+  }
+
+  .product-content {
+    width: 100%;
+  }
+
+  .product-card {
+    width: 47%;
+    padding: 10px;
+  }
+
+  .product-grid {
+    margin-top: 40px;
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+
+  .production-process .section-content {
+    margin-top: 40px;
+  }
+}
