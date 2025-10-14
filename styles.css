@@ -6,6 +6,7 @@
 
 :root {
   --primary-color: #047fd5;
+  --secondary-color: #0056b3;
   --shine-color: #f3c412;
   --first-background-color: #ffffff;
   --secondary-background-color: #f0f0f0;
@@ -28,7 +29,7 @@
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: var(--secondary-color);
 }
 
 /* body */
@@ -52,6 +53,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   z-index: 100;
 }
 
@@ -289,16 +291,11 @@ details[open] {
 }
 
 details:hover {
-  background-color: var(--shine-color);
-  color: var(--text-color);
+  background-color: var(--secondary-color);
 }
 
 #waterStory details p {
   color: var(--second-text-color);
-}
-
-#waterStory details:hover p {
-  color: var(--text-color);
 }
 
 summary {
@@ -345,8 +342,6 @@ details[open] p {
 .product-card {
   width: 300px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   background-color: var(--secondary-background-color);
   border-radius: 15px;
@@ -367,6 +362,11 @@ details[open] p {
 .product-card h3 {
   font-size: 18px;
   margin-top: 20px;
+  color: var(--text-color);
+}
+
+.product-card h4{
+  margin-top: 5px;
   color: var(--primary-color);
 }
 
@@ -424,9 +424,13 @@ details[open] p {
   align-items: center;
 }
 
+.contact a{
+  color: var(--primary-color);
+}
+
 .docs-parts {
   margin-top: 50px;
-  width: 50%;
+  width: 100%;
   font-size: 20px;
   list-style: none;
   display: flex;
@@ -520,7 +524,7 @@ footer a {
     justify-content: start;
     align-items: center;
     top: 70px;
-    right: -500px;
+    right: -1500px;
     width: 100%;
     height: auto;
     background-color: var(--first-background-color);
@@ -575,7 +579,6 @@ footer a {
   h2 {
   font-size: 30px;
   margin-bottom: 20px;
-  color: var(--shine-color);
 }
 
 .hero-content .first-p{
