@@ -5,9 +5,9 @@
 }
 
 :root {
-  --primary-color: #047fd5;
+  --primary-color: #011689;
   --secondary-color: #0056b3;
-  --shine-color: #f3c412;
+  --shine-color: #FCDC00;
   --first-background-color: #ffffff;
   --secondary-background-color: #f0f0f0;
   --text-color: black;
@@ -69,7 +69,8 @@ body {
 }
 
 .load img {
-  width: 500px;
+  width: auto;
+  height: 100px;
   animation: scale 2s linear infinite;
 }
 
@@ -107,7 +108,7 @@ body {
 /* header section */
 header {
   position: fixed;
-  top: 70px;
+  top: 40px;
   left: 0;
   width: 100%;
   height: 80px;
@@ -126,13 +127,13 @@ header.scrolled{
 }
 
 header .logo img {
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: 75px;
 }
 
 header.scrolled .logo img{
-  width: 85px;
-  height: 80px;
+  width: auto;
+  height: 45px;
 }
 
 nav{
@@ -180,7 +181,7 @@ nav{
   position: relative;
   width: 100%;
   height: 100dvh;
-  background: url("https://wallpaperaccess.com/full/208535.jpg");
+  background: url("images/water.gif");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -295,6 +296,7 @@ details {
 
 details[open] {
   max-height: 1000px;
+  background: var(--secondary-color);
 }
 
 details:hover {
@@ -502,13 +504,14 @@ footer .social-links a {
 /* responsive */
 @media (max-width: 900px) {
   .load img {
-    width: 300px;
+    width: 200px;
+    height: 75px;
   }
 
   header {
-    top: 20px;
+    top: 10px;
     width: 100%;
-    height: 70px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -521,13 +524,15 @@ footer .social-links a {
   }
 
   header .logo img {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: 40px;
+    margin-left: 20px;
   }
 
   header.scrolled .logo img {
-    width: 75px;
-    height: 70px;
+    width: auto;
+    height: 30px;
+    margin-left: 0;
   }
 
     header.scrolled .menu-toggle{
@@ -539,7 +544,7 @@ footer .social-links a {
     display: flex;
     justify-content: start;
     align-items: center;
-    top: 70px;
+    top: 60px;
     right: -1500px;
     width: 100%;
     height: auto;

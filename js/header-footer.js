@@ -1,6 +1,6 @@
 const header = document.getElementById('header')
 header.innerHTML = `<div class="logo">
-            <a href="#hero"><img src="images/tannourine new logo.jpg" alt="Tannourine Water Logo"></a>
+            <a href="#hero"><img src="images/tannourine logo.png" alt="Tannourine Water Logo"></a>
         </div>
         <nav>
             <ul class="nav-links">
@@ -20,7 +20,7 @@ header.innerHTML = `<div class="logo">
 
 const footer = document.getElementById('footer')
 footer.innerHTML = `
-        <p>&copy; 2024 Tannourine Water | All rights reserved | By <a href="chedix.netlify.app">ChediX</a></p>
+        <p>&copy; 2024 Tannourine Water | All rights reserved | By <a href="https://chedix.netlify.app">ChediX</a></p>
         <div class="social-links">
             <a href="https://www.facebook.com/tannourinewater" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/tannourinewater/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -28,4 +28,9 @@ footer.innerHTML = `
                     class="fab fa-linkedin-in"></i></a>
             <a href="https://www.youtube.com/@tannourinewater" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
+`;
+
+const load = document.getElementById('load');
+load.innerHTML = `
+<img src="images/tannourine logo.png" alt="Tannourine Water Logo">
 `;
