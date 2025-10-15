@@ -107,11 +107,11 @@ body {
 /* header section */
 header {
   position: fixed;
-  top: 80px;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 80px;
-  padding: 20px 80px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,8 +126,8 @@ header.scrolled{
 }
 
 header .logo img {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 header.scrolled .logo img{
@@ -201,6 +201,10 @@ nav{
   z-index: 0;
 }
 
+.subpages{
+  height: 50dvh;
+}
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -244,8 +248,8 @@ h1 {
   width: 50%;
 }
 
-.section-content .subpages{
-  width: 100%;
+.subpages-content{
+  width: 93%;
 }
 
 h2 {
@@ -263,7 +267,6 @@ h2 {
 }
 
 .section img {
-  margin-top: 50px;
   height: 400px;
   border-radius: 15px;
 }
@@ -332,10 +335,6 @@ details[open] p {
 
 /* products section */
 
-.product-content {
-  width: 93%;
-}
-
 .product-grid {
   display: flex;
   gap: 20px;
@@ -382,46 +381,37 @@ h4{
 
 /* healthy tips */
 
-.healthy-tips ul {
+.healthy-tips ul, .policy-content ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
   list-style: none;
 }
 
-.healthy-tips li {
-  font-size: 20px;
-  color: var(--text-color);
-  margin: 10px 0;
+/* production process */
+.subpages-process{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* production process */
-.production-process iframe {
+.subpages-process iframe {
   height: 400px;
   width: 700px;
   border-radius: 15px;
 }
 
-.production-process ol {
+ol {
   display: flex;
   flex-direction: column;
   gap: 10px;
   list-style: none;
 }
 
-.production-process li {
+li {
   font-size: 20px;
   color: var(--text-color);
   margin: 10px 0;
-}
-
-/* food safety policy */
-#foodSafetyPolicy {
-  background-color: var(--secondary-background-color);
-}
-
-.policy-content p {
-  margin: 20px auto;
 }
 
 /* contact section */
@@ -471,23 +461,42 @@ h4{
 footer {
   background-color: var(--primary-color);
   color: var(--second-text-color);
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 20px;
   position: relative;
   bottom: 0;
   width: 100%;
-  margin-top: 50px;
 }
+
 footer p {
-  font-size: 15px;
+  font-size: clamp(1rem, 20vw, 1rem);;
   margin-bottom: 10px;
 }
-footer a {
-  margin: 10px;
+
+footer p a {
+  color: var(--shine-color);
+  font-size: clamp(1rem, 20vw, 1rem);;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .social-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+footer .social-links a {
+  font-size: clamp(1rem, 20vw, 1.25rem);;
   color: var(--shine-color);
   text-decoration: none;
   font-weight: 600;
-  font-size: 20px;
 }
 
 /* responsive */
@@ -570,7 +579,7 @@ footer a {
     cursor: pointer;
   }
 
-  .section-content {
+  .section-content, .subpages-content {
     width: 100%;
   }
 
@@ -607,10 +616,6 @@ footer a {
     height: 200px;
   }
 
-  .product-content {
-    width: 100%;
-  }
-
   .product-card {
     width: 47%;
     padding: 10px;
@@ -624,7 +629,19 @@ footer a {
     height: 150px;
   }
 
-  .production-process .section-content {
+  .subpages-content {
     margin-top: 40px;
+  }
+
+  .subpages-process iframe{
+    height: 250px;
+    width: 100%;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
   }
 }
