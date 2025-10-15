@@ -6,7 +6,7 @@ header.innerHTML = `<div class="logo">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Our Products</a></li>
-                <li><a href="production-process.html">production Process</a></li>
+                <li><a href="production-process.html">Production Process</a></li>
                 <li><a href="safety-policy.html">F.S.P. ISO:22000</a></li>
                 <li><a href="contact-us.html">Contact Us</a></li>
                 <li><a href="tel:1522"><i class="fa-solid fa-phone-volume"></i> 1522</a></li>
@@ -33,4 +33,5 @@ footer.innerHTML = `
 const load = document.getElementById('load');
 load.innerHTML = `
 <img src="images/tannourine logo.png" alt="Tannourine Water Logo">
+
 `;
