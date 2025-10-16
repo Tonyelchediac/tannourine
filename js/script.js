@@ -6,7 +6,7 @@
             preloader.style.visibility = 'hidden';
             setTimeout(() => {
                 preloader.style.display = 'none';
-            }, 500);
+            }, 800);
         });
 
         // Handle details elements to allow only one open at a time

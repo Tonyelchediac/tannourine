@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: #011689;
-  --secondary-color: #0056b3;
+  --secondary-color: #001ec9;
   --shine-color: #FCDC00;
   --first-background-color: #ffffff;
   --secondary-background-color: #f0f0f0;
@@ -16,12 +16,12 @@
 
 .btn {
   display: inline-block;
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 15px 25px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--second-text-color);
   background-color: var(--primary-color);
-  border: none;
+  border: 1px solid var(--shine-color);
   border-radius: 15px;
   cursor: pointer;
   text-decoration: none;
@@ -230,6 +230,13 @@ h1 {
   font-weight: 600;
 }
 
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .hero-btn {
   margin-top: 50px;
 }
@@ -283,10 +290,7 @@ h2 {
 }
 
 details {
-  background-color: var(--primary-color);
-  color: var(--second-text-color);
   border: none;
-  border-radius: 15px;
   margin: 10px 0;
   cursor: pointer;
   overflow: hidden;
@@ -296,44 +300,58 @@ details {
 
 details[open] {
   max-height: 1000px;
-  background: var(--secondary-color);
 }
 
-details:hover {
-  background-color: var(--secondary-color);
-}
-
-#waterStory details p {
-  color: var(--second-text-color);
-}
-
-summary {
+summary{
   width: 100%;
-  padding: 20px;
   font-size: 20px;
-  font-weight: 550;
   outline: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-summary::marker {
-  font-size: 0px;
+summary span{
+  background: var(--primary-color);
+  border-radius: 25px;
+  font-size: 17px;
+  width: 95%;
+  padding: 10px 0px;
+  color: var(--second-text-color);
+  border: 2px solid var(--shine-color);
 }
 
-details[open] summary i {
+summary span b{
+  padding-left: 20px;
+  font-weight: 550;
+}
+
+summary i{
+  background: var(--primary-color);
+  color: var(--second-text-color);
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 50%;
+  border: 2px solid var(--shine-color);
+  transition: transform 0.3s ease;
+}
+
+details[open] summary i{
   transform: rotate(180deg);
-  transition: transform 0.3s ease-in-out;
 }
 
-details[open] summary {
-  border-bottom: 1px solid var(--second-text-color);
+.section details p{
+  margin-top: 10px;
+  background: var(--primary-color);
+  color: var(--second-text-color);
+  padding: 20px;
+  border-radius: 25px;
+  border: 2px solid var(--shine-color);
 }
 
-details[open] p {
-  padding: 10px 20px;
-}
+.section details[open] p, details[open] summary i, details[open] summary span{
+  background: var(--secondary-color);
+} 
 
 /* products section */
 
@@ -379,6 +397,10 @@ h4{
   color: var(--primary-color);
   margin: 30px 0;
   text-decoration: underline;
+}
+
+.B-h4{
+  margin: 0;
 }
 
 /* healthy tips */
@@ -621,6 +643,10 @@ footer .social-links a {
     height: 200px;
   }
 
+  summary span{
+    width: 85%;
+  }
+
   .product-card {
     width: 47%;
     padding: 10px;
@@ -650,4 +676,3 @@ footer .social-links a {
     align-items: start;
   }
 }
-
