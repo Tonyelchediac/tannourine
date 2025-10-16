@@ -50,7 +50,7 @@ load.innerHTML = `
       hotlineBtn.style.fontSize = '13px';
       hotlineBtn.style.border = '2px solid var(--shine-color)';
       hotlineBtn.style.outline = 'none';
-      hotlineBtn.style.backgroundColor = 'var(--primary-color)';
+      hotlineBtn.style.backgroundColor = '#008a17ff';
       hotlineBtn.style.color = 'var(--second-text-color)';
       hotlineBtn.style.cursor = 'pointer';
       hotlineBtn.style.padding = '12px 14px';
@@ -72,4 +72,5 @@ load.innerHTML = `
       });
 
       document.body.appendChild(hotlineBtn);
+
     });
